@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="?attr/colorPrimary"
+    android:elevation="8dp"
+    app:theme="@style/ThemeOverlay.MaterialComponents.Light"
+    app:popupTheme="@style/ThemeOverlay.MaterialComponents.Light"
+    app:contentInsetStart="0dp"
+    app:contentInsetStartWithNavigation="0dp"
+    tools:ignore="UnusedAttribute" >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="46dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:background="?selectableItemBackgroundBorderless"
+        android:onClick="bottomBarOnClicks"
+        android:tint="@color/colorAccentbtn"
+        android:padding="12dp"
+        app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        fontPath="fonts/qsem.ttf"
+        android:textColor="@color/colorAccentbtn"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/back_button"
+        android:id="@+id/tvtitle"/>
+    </RelativeLayout>
+
+</androidx.appcompat.widget.Toolbar>

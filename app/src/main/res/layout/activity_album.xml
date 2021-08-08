@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:id="@+id/tool_bar"
+                android:background="?attr/colorPrimary"
+                android:elevation="8dp"
+                app:theme="@style/ThemeOverlay.MaterialComponents.Light"
+                app:popupTheme="@style/ThemeOverlay.MaterialComponents.Light"
+                app:contentInsetStart="0dp"
+                app:contentInsetStartWithNavigation="0dp"
+                tools:ignore="UnusedAttribute"
+                app:layout_scrollFlags="scroll|enterAlways"  >
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/back_button"
+                        android:layout_width="46dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:onClick="bottomBarOnClicks"
+                        android:tint="@color/colorAccentbtn"
+                        android:padding="12dp"
+                        app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        fontPath="fonts/qsem.ttf"
+                        android:textColor="@color/colorAccentbtn"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/back_button"
+                        android:id="@+id/tvtitle"/>
+                </RelativeLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/grid_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tool_bar"
+            android:scrollbars="vertical"
+            android:layoutAnimation="@anim/layout_animation"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="8dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        app:backgroundTint="#E91E63"
+        android:layout_gravity="bottom|end"
+        android:layout_marginTop="8dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:onClick="bottomBarOnClickss"
+        android:padding="8dp"
+        app:pressedTranslationZ="20dp"
+        app:elevation="10dp"
+        app:rippleColor="@color/colorPrimary"
+        app:srcCompat="@drawable/play_to_pause_avd" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
